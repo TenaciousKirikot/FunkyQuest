@@ -2,31 +2,30 @@
 using System;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.Events;
 using TMPro;
+using ExtEvents;
+using UnityEngine.Playables;
 
 namespace FunkyQuest
 {
     public class CharacterInteraction : MonoBehaviour
     {
-        [Header("Read Only")]
-        [SerializeField][ReadOnly]  private CharacterPhysics    _linkedPhysics;
-        [SerializeField][ReadOnly]  private bool                _isInteracting;
+        [field: Header("Read Only")]
+        [field: SerializeField][field: ReadOnly]    public  bool                IsInteracting { get; set; }
 
         [Header("Properties")]
-        [SerializeField]            private bool                _disableInput;
-        [SerializeField]            private TMP_Text            _interactionSign;
-        [SerializeField]            private Rect                _interactionRect;
-        [SerializeField]            private LayerMask           _interactionMask;
-        [SerializeField]            private KeyCode             _interactionKey;
-
-        private void Start()
-        {
-            _linkedPhysics = GetComponentInParent<CharacterPhysics>();
-        }
+        [SerializeField]                            private TMP_Text            _interactionSign;
+        [SerializeField]                            private Rect                _interactionRect;
+        [SerializeField]                            private LayerMask           _interactionMask;
+        [SerializeField]                            private KeyCode             _interactionKey;
+        [SerializeField]                            private PlayableDirector    _director;
+        [SerializeField]                            private ExtEvent            _onInteractionStart;
+        [SerializeField]                            private ExtEvent            _onInteractionEnd;
 
         private void Update()
         {
-            if (_isInteracting)
+            if (IsInteracting)
             {
                 _interactionSign.gameObject.SetActive(false);
             }
@@ -41,15 +40,21 @@ namespace FunkyQuest
 
                 if (isNearInteractable)
                 {
-                    bool isHolding = Input.GetKey(_interactionKey);
+                    bool isHolding = Input.GetKeyDown(_interactionKey);
                     if (isHolding)
                     {
-                        _isInteracting = true;
-
-                        if (_disableInput)
+                        void OnDirectorStopped(PlayableDirector directror)
                         {
-                            _linkedPhysics.CanInput = false;
-                        }
+                            directror.stopped -= OnDirectorStopped;
+                            _onInteractionEnd.Invoke();
+                            IsInteracting = false;
+                        };
+
+                        IsInteracting = true;
+                        _director.stopped += OnDirectorStopped;
+
+                        _onInteractionStart.Invoke();
+                        _director.Play();
                     }
                 }
             }

@@ -54,6 +54,10 @@ namespace FunkyQuest
                     }
                 }
             }
+            else
+            {
+                _linkedRigidbody.velocity = new Vector2(0, _linkedRigidbody.velocity.y);
+            }
         }
 
         private void SetState(CharacterAnimationState value, string state)
