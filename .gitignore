@@ -81,5 +81,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # Ignore Packages
-*.shader linguist-language=C#
-*.cginc linguist-language=C#
+*.shader linguist-detectable=false
+*.cginc linguist-detectable=false
