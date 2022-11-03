@@ -81,5 +81,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # Ignore Packages
-Packages/* linguist-vendored
-Assets/TextMesh Pro/* linguist-vendored
+*.shader linguist-language=C#
+*.cginc linguist-language=C#
