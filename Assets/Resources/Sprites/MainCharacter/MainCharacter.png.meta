@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -2714,9 +2714,9 @@ TextureImporter:
       Walk13: 1102979009
       Idle26: -1025068789
       Idle9: -1145036838
-      Walk4: -745443945
-      MainCharacter_92: -861409330
       MainCharacter_79: 208719243
+      MainCharacter_92: -861409330
+      Walk4: -745443945
       MainCharacter_116: 936656418
       MainCharacter_95: -588000368
       MainCharacter_113: -1637142628
