@@ -1,0 +1,23 @@
+﻿
+using System;
+using UnityEngine;
+using UnityEngine.Events;
+
+namespace FQuest_Alt1
+{
+    internal class EventEffector : InteractableEffector
+    {
+        public override event Action<InteractableEffector> Finished;
+
+        [Header("Event Effector - Properties")]
+        [SerializeField]    private UnityEvent  _event;
+
+        public override void PerformEffect()
+        {
+            IsActivated = true;
+            _event?.Invoke();
+            IsActivated = false;
+            Finished?.Invoke(this);
+        }
+    }
+}

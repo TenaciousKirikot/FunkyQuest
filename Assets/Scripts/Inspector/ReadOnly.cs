@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-namespace FunkyQuest
+namespace FQuest_Alt1
 {
     public class ReadOnlyAttribute : PropertyAttribute
     {
