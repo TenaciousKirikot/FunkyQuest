@@ -175,8 +175,6 @@ PlayableDirector:
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: -3056167674565311906, guid: e85464ea1a1fcd44d88166d1fa464409, type: 2}
-    value: {fileID: 1900900456}
   - key: {fileID: -563744462258243934, guid: e85464ea1a1fcd44d88166d1fa464409, type: 2}
     value: {fileID: 1918022621}
   - key: {fileID: -2417728348458752273, guid: e85464ea1a1fcd44d88166d1fa464409, type: 2}
@@ -185,6 +183,14 @@ PlayableDirector:
     value: {fileID: 1059894671}
   - key: {fileID: 5365149495265998635, guid: e85464ea1a1fcd44d88166d1fa464409, type: 2}
     value: {fileID: 1152994412}
+  - key: {fileID: 9031544777216941507, guid: e85464ea1a1fcd44d88166d1fa464409, type: 2}
+    value: {fileID: 1152994412}
+  - key: {fileID: -8101023802880970492, guid: e85464ea1a1fcd44d88166d1fa464409, type: 2}
+    value: {fileID: 1900900456}
+  - key: {fileID: -5299631838497334292, guid: e85464ea1a1fcd44d88166d1fa464409, type: 2}
+    value: {fileID: 1918022621}
+  - key: {fileID: 2610101137028209458, guid: e85464ea1a1fcd44d88166d1fa464409, type: 2}
+    value: {fileID: 1059894671}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &67642151
@@ -9763,10 +9769,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.15
       objectReference: {fileID: 0}
+    - target: {fileID: 3761252892857822755, guid: bb6efe38b0d66994bad7b8074abf3c1c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4108602899476009877, guid: bb6efe38b0d66994bad7b8074abf3c1c, type: 3}
       propertyPath: orthographic size
-      value: 6.9479165
+      value: 6.1979165
       objectReference: {fileID: 0}
+    - target: {fileID: 6576701324513256132, guid: bb6efe38b0d66994bad7b8074abf3c1c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 986252637, guid: 893634a1425ed9b4985902b916a16022, type: 3}
     - target: {fileID: 8829506281950712833, guid: bb6efe38b0d66994bad7b8074abf3c1c, type: 3}
       propertyPath: m_Name
       value: Animator

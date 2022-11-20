@@ -1,5 +1,5 @@
 
-namespace FQuest_Alt1
+namespace FunkyQuest
 {
     public enum CharacterAnimationState : byte
     {

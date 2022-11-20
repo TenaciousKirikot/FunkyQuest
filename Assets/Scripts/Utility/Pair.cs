@@ -2,7 +2,7 @@
 using System;
 using UnityEngine;
 
-namespace FQuest_Alt1
+namespace FunkyQuest
 {
     [Serializable]
     internal struct Pair<T1, T2>

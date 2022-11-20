@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Playables;
 
-namespace FQuest_Alt1
+namespace FunkyQuest
 {
     internal class DirectorEffector : InteractableEffector
     {

@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-namespace FQuest_Alt1
+namespace FunkyQuest
 {
     internal abstract class ConditionObserver : MonoBehaviour
     {

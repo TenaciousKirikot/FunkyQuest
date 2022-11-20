@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace FQuest_Alt1
+namespace FunkyQuest
 {
     internal class TextInputObserver : ConditionObserver
     {

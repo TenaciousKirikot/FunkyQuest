@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace FQuest_Alt1
+namespace FunkyQuest
 {
     [CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
     public class ReadOnlyDrawer : PropertyDrawer

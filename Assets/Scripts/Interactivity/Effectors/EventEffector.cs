@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace FQuest_Alt1
+namespace FunkyQuest
 {
     internal class EventEffector : InteractableEffector
     {
@@ -11,7 +11,6 @@ namespace FQuest_Alt1
 
         [Header("Event Effector - Properties")]
         [SerializeField]    private UnityEvent  _event;
-
         public override void PerformEffect()
         {
             IsActivated = true;

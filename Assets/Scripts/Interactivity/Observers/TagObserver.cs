@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace FQuest_Alt1
+namespace FunkyQuest
 {
     internal class TagObserver : ConditionObserver
     {
