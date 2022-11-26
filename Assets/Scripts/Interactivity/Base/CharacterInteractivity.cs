@@ -25,7 +25,7 @@ namespace FunkyQuest
                 Interactable interactable = _interactables[i];
                 _typeIds.TryGetValue(interactable.InteractableTypeId, out int count);
 
-                if (interactable.CanInteract && count < interactable.MaxActivations)
+                if (interactable.CanInteract && (count < interactable.MaxActivations || interactable.MaxActivations == -1))
                 {
                     interactable.Interact(this);
                     _typeIds[interactable.InteractableTypeId] = ++count;
