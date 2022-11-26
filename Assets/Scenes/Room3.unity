@@ -236,6 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <IsFulfilled>k__BackingField: 0
   <QuestionIndex>k__BackingField: 0
+  _currentTime: 0
   _options:
   - {fileID: 2009591866}
   - {fileID: 1557353575}
@@ -270,6 +271,10 @@ MonoBehaviour:
   - C4
   - D4
   _answers: 02000000000000000300000001000000
+  _time: 5
+  _failed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &136279269
 MonoBehaviour:
   m_ObjectHideFlags: 0
